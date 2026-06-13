@@ -221,16 +221,6 @@ GET https://style.functioncool.xyz/skillapi
     &cat={web|desktop|miniapp|mobile|all} （目标平台分类）
 ```
 
-#### 平台分类说明
-
-| 分类 | 适用场景 |
-|||
-| `web` | SSR / SPA / PWA / 静态网站 |
-| `desktop` | Electron / 原生桌面 / 大屏 |
-| `miniapp` | 微信 / 支付宝 / 抖音小程序 |
-| `mobile` | iOS / Android / 移动端 H5 |
-| `all` | 跨平台或不确定时使用 |
-
 #### 适用与不适用
 
 ✅ **适合**：UI 组件设计、CSS 布局、响应式样式、交互动效、移动端适配、设计系统搭建。
