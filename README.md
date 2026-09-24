@@ -4,6 +4,8 @@
 <p><em>给 AI 装一个在线的「设计顾问」</em></p>
 </div>
 
+**发行方**：由异猫工作群（mutantcat.org）发行 · GitHub: <https://github.com/Mutantcat-Working-Group>
+
 > 装在 Claude Code / Cursor / Codex 等 AI 编程助手里的轻量技能插件。
 > 写 UI 之前，模型先联网查一份设计规范卡片，再动手写 CSS。
 

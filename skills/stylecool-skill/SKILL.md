@@ -14,6 +14,8 @@ description: |
 
 # StyleCool — 给 AI 注入设计审美
 
+> 由异猫工作群（mutantcat.org）发行 · GitHub: https://github.com/Mutantcat-Working-Group
+
 ## 为什么需要这个 Skill（模型应当内化这个认知）
 
 AI 模型擅长逻辑和语法，但**审美是盲区**。当你让 AI 写一个按钮、一张卡片、一个导航栏，它默认产出的往往是：
