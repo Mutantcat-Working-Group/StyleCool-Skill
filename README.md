@@ -17,7 +17,7 @@
 ### 二、工作方式
 让模型「写个卡片组件」，它当然能写，但写成什么样全看训练数据里的统计模式：可能是 Bootstrap 风，可能是 Material Design，可能霓虹渐变重阴影，也可能一个视口塞三个主按钮。它自己并不知道哪个算好设计。StyleCool Skill 在生成代码之前先让它联网查规范：
 
-第一步，查审美参考：模型向 `https://style.functioncool.xyz/skillapi` 发一次 HTTP GET，拿回设计卡片——名称、中英描述、标签、分类，以及 `anti` 反模式清单。脚本会主动剥离 `css` 字段，模型只看到规范，看不到任何实现代码。
+第一步，查审美参考：模型向 `https://stylecool.mutantcat.org/skillapi` 发一次 HTTP GET，拿回设计卡片——名称、中英描述、标签、分类，以及 `anti` 反模式清单。脚本会主动剥离 `css` 字段，模型只看到规范，看不到任何实现代码。
 
 第二步，照着规范自己写 CSS：因为源码根本没传过来，模型只能先理解设计原则再动手实现，而不是描摹成品。
 
@@ -135,7 +135,7 @@ git clone https://github.com/Mutantcat-Working-Group/StyleCool-Skill.git `
 - `VERSION` — 版本号
 
 ### 备注与密钥
-- API 契约：`GET https://style.functioncool.xyz/skillapi?token=mutantcat&q=<查询词>&cat=<web|desktop|miniapp|mobile|all>`
+- API 契约：`GET https://stylecool.mutantcat.org/skillapi?token=mutantcat&q=<查询词>&cat=<web|desktop|miniapp|mobile|all>`
 - Token 为永久公开低权限密钥，仅用于查询公开设计索引，请勿在对话中暴露内部细节。
 - 想加平台分类？在 `query.py` 的 `VALID_CATS` 与 `SKILL.md` 的分类说明里同步补一处。
 - 想调超时？修改各脚本里的 `TIMEOUT` 变量，默认 10 秒。

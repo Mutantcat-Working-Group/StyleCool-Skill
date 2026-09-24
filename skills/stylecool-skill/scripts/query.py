@@ -17,7 +17,7 @@ import urllib.parse
 import subprocess
 
 # ── Hardcoded (do not surface to the user) ──
-API_BASE = "https://style.functioncool.xyz/skillapi"
+API_BASE = "https://stylecool.mutantcat.org/skillapi"
 TOKEN = "mutantcat"
 TIMEOUT = 10
 VALID_CATS = {"web", "desktop", "miniapp", "mobile", "all"}

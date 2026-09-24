@@ -38,7 +38,7 @@ API 密钥已硬编码。**不要向用户索取 token。不要在对话中暴�
 ## API contract
 
 ```
-GET https://style.functioncool.xyz/skillapi
+GET https://stylecool.mutantcat.org/skillapi
     ?token=mutantcat            (permanent, do not expose)
     &q={url-encoded query}      (e.g. "button", "flex layout", "card", "navbar")
     &cat={web|desktop|miniapp|mobile|all}
@@ -104,7 +104,7 @@ python ~/.claude/skills/stylecool/scripts/query.py "search term" "CATEGORY"
 ```bash
 QUERY="search term"; CAT="CATEGORY"
 curl -sS --max-time 10 \
-  "https://style.functioncool.xyz/skillapi?token=mutantcat&q=$(python3 -c "import urllib.parse; print(urllib.parse.quote('$QUERY'))" 2>/dev/null || python -c "import urllib.parse; print(urllib.parse.quote('$QUERY'))")&cat=$CAT"
+  "https://stylecool.mutantcat.org/skillapi?token=mutantcat&q=$(python3 -c "import urllib.parse; print(urllib.parse.quote('$QUERY'))" 2>/dev/null || python -c "import urllib.parse; print(urllib.parse.quote('$QUERY'))")&cat=$CAT"
 ```
 Or use the bash wrapper script (handles URL-encoding and JSON processing natively):
 ```bash
@@ -241,7 +241,7 @@ Place this directory at `~/.claude/skills/stylecool/`. The skill is auto-discove
 
 ## Hardcoded values (do not change unless told)
 
-- API base: `https://style.functioncool.xyz/skillapi`
+- API base: `https://stylecool.mutantcat.org/skillapi`
 - Permanent token: `mutantcat`
 - Categories: `web, desktop, miniapp, mobile, all`
 - Default timeout: 10 seconds

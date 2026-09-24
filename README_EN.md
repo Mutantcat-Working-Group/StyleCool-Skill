@@ -17,7 +17,7 @@
 ### 2. How It Works
 Ask the model to "write a card component" and it can, but what it writes depends on statistical patterns in the training data: Bootstrap-style, Material Design, neon gradients with heavy shadows, or three primary buttons in one viewport. The model cannot judge which one is good design. StyleCool Skill makes it consult the rules online before generating:
 
-First, fetch the aesthetic reference: the model issues one HTTP GET to `https://style.functioncool.xyz/skillapi` and receives a design card with name, Chinese/English descriptions, tags, category, and the `anti` anti-pattern list. The helper script deliberately strips the `css` field, so the model only sees the rules, never the implementation code.
+First, fetch the aesthetic reference: the model issues one HTTP GET to `https://stylecool.mutantcat.org/skillapi` and receives a design card with name, Chinese/English descriptions, tags, category, and the `anti` anti-pattern list. The helper script deliberately strips the `css` field, so the model only sees the rules, never the implementation code.
 
 Second, write the CSS from the rules: because the source code is never sent, the model must understand the design principles first and implement them itself, instead of tracing a finished example.
 
@@ -135,7 +135,7 @@ Cross-platform usage:
 - `VERSION` — version number
 
 ### Notes & Keys
-- API contract: `GET https://style.functioncool.xyz/skillapi?token=mutantcat&q=<query>&cat=<web|desktop|miniapp|mobile|all>`
+- API contract: `GET https://stylecool.mutantcat.org/skillapi?token=mutantcat&q=<query>&cat=<web|desktop|miniapp|mobile|all>`
 - The token is a permanent public low-privilege key used only to query the public design index; do not expose internal details in conversation.
 - To add a platform category, update `VALID_CATS` in `query.py` and the category documentation in `SKILL.md` together.
 - To adjust the timeout, change the `TIMEOUT` variable in each script; the default is 10 seconds.
